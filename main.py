@@ -74,7 +74,7 @@ def moust_type(df: pandas.DataFrame):
     if new_type > current_type:
         return 'Больше всего новых сделок'
     elif new_type < current_type:
-        return 'Больше всего новых сделок'
+        return 'Больше всего текущих сделок'
 
     return 'Сделок новая/текущая одинаковое колличество'
 
