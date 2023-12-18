@@ -112,7 +112,7 @@ def manager_salary_remainder(df: pandas.DataFrame, current_mounth=6):
     # убираем из датафрейма записи с типом ВНУТРЕННИЙ, так как они не входят в конечную выборку
     df = df[df['status'] != 'ВНУТРЕННИЙ']
     for manager in df['sale'].unique():
-        # выделяем общие требования для расчета всех видов остатков, далее высчитываем отдельно пр
+        # выделяем общие требования для расчета всех видов остатков, далее высчитываем отдельно 
         base_manager_df = df[(df['receiving_date'] >= datetime.strptime(f'2021-0{current_mounth+1}-01', '%Y-%m-%d')) &
                              (df['receiving_date'] <= datetime.strptime(f'2021-0{current_mounth+1}-31', '%Y-%m-%d')) &
                              (df['document'] == 'оригинал') &
